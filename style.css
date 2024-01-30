@@ -50,10 +50,10 @@ a{
 }
 
 a:hover{
-    color:rgb(25, 176, 202);
+    color:rgb(213, 224, 224);
     text-decoration: underline;
     text-underline-offset: 1rem;
-    text-decoration-color: rgb(25, 176, 202);
+    text-decoration-color: rgb(213, 224, 224);
 }
 
 .logo{
@@ -482,4 +482,13 @@ button {
 
 button:hover {
     background-color: #333435;
+}
+
+
+#map{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
