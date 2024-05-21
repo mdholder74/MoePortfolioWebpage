@@ -166,7 +166,7 @@ section{
     display:flex;
     justify-content: center;
     gap:5rem;
-    height: 80vh;
+    height: 70vh;
     
 }
 
@@ -403,8 +403,8 @@ article.icon{
   
   .project-img {
     border-radius: 2rem;
-    width: 40%;
-    height: 40%;
+    width: 30%;
+    height: 30%;
   }
   
   .project-title {
@@ -421,7 +421,7 @@ article.icon{
     display: flex;
     justify-content: center;
     flex-direction:column;
-    height: 70vh;
+    height: 30vh;
 }
 
 .contact-info-upper-container{
