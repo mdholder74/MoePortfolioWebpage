@@ -14,10 +14,11 @@
       <div class="logo">Moe's Portfolio!</div>
       <div>
         <ul class="nav-links">
+          <li><a href="#resume">Resume</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact">Contact Me</a></li>
         </ul>
       </div>
     </nav>
@@ -31,19 +32,20 @@
           <span></span>
         </div>
         <div class="menu-links">
+          <li><a href="#resume" onclick="toggleMenu()">Resume</a></li>
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact Me</a></li>
         </div>
       </div>
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="assets/Moe Headshot 2.PNG" alt="Moe Holder profile picture" />
+        <p><img src="assets/Moe Headshot 2.PNG" alt="Moe Holder profile picture" />
       </div>
       <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
+        <p class="section__text__p1">Hey, I'm</p>
         <h1 class="title">Moe Holder</h1>
         <p class="section__text__p2">Aspiring Software Developer</p>
         <div class="btn-container">
@@ -82,6 +84,7 @@
           src="./assets/charlotte-north-carolina-city-skyline.jpg"
           alt="Picture of my home town charlotte-north-carolina-city-skyline"
             class="about-pic"
+            
           />
         </div>
         <div class="about-details-container">
@@ -120,8 +123,6 @@
             <p>
               With over five years of experience at Amazon, I have progressed from entry-level positions to leadership roles, gaining valuable insights along the way. This journey has equipped me well for both individual contributor and team leader positions.
           </p><br>
-            
-    
           </div>
         </div>
       </div>
@@ -192,31 +193,33 @@
                 </article>
               </section>
               <section>
-                <p class="section__text__p1">Explore My</p>
-                <h1 class="title">Self-Guided Projects</h1>
+                <p class="section__text__p1">Check Out My</p>
+                <h1 class="title">Projects</h1>
                 <br>
                 <div class="self-guided-projects">
                 <h3 class="self-guided-projects-headings">Title: Console Calculator Program/ Calculator App🎲</h3>
-                <p>Description: Developed a console-based calculator program in C++ capable of performing arithmetic operations such as addition, subtraction, multiplication, and division.
-                <p>➡Key Features: User-friendly interface, error handling, support for basic math functions.</p><br>
+                <p>Description: Developed a console-based calculator program in C++ capable of performing arithmetic</p>
+                <p>operations such as addition, subtraction, multiplication, and division.</p>
+                <p class="key-features">➡Key Features: User-friendly interface, error handling, support for basic math functions.</p><br>
                 
                 <h3 class="self-guided-projects-headings">Project Title: ATM Banking Program💵</h3>
-                <p>Description: Designed an ATM system in C++ allowing users to perform banking transactions.
-                  <p>➡Key Features: Account management, withdrawal, deposit, and security protocols.</p><br>
+                <p>Description: Designed an ATM system in C++ allowing users to perform banking transactions.</p>
+                  <p class="key-features">➡Key Features: Account management, withdrawal, deposit, and security protocols.</p><br>
                 
                 <h3 class="self-guided-projects-headings">Project Title: Rock Paper Scissors Game🧾🧻</h3>
-                <p>Description: Developed a console-based Rock Paper Scissors game using C++ with user input and.
-                  <p>➡Key Features: Interactive gameplay, decision-making logic, user vs. computer mode.</p><br>
+                <p>Description: Developed a console-based Rock Paper Scissors game using C++ with user input.</p>
+                  <p class="key-features">➡Key Features: Interactive gameplay, decision-making logic, user vs. computer mode.</p><br>
                 
                 <h3 class="self-guided-projects-headings">Project Title: Bartending Quiz Game🍸</h3>
                 <p>Description: Created a quiz game in C++ featuring multiple-choice questions with scoring.
-                  <p>➡Key Features: Question database, user input validation, scoring system, feedback on correct/incorrect answers.</p><br>
+                  <p class="key-features">➡Key Features: Question database, user input validation, scoring system, feedback on correct/incorrect answers.</p><br>
                 
                 <h3 class="self-guided-projects-headings">Project Title: Tic Tac Toe Game❌⭕</h3>
                 <p>Description: Implemented a classic Tic Tac Toe game in C++ with a command-line interface.</p>
-                <p>➡Key Features: Two-player mode, game grid display, win/lose conditions detection.</p><br>
+                <p class="key-features">➡Key Features: Two-player mode, game grid display, win/lose conditions detection.</p><br>
               </div>
             </section>
+            <hr>
             
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
@@ -263,45 +266,64 @@
         </div>
       </div>
     </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:mdholder74@gmail.com">mdholder74@gmail.com</a></p>
+    <section>
+      <div class="map-form-container">
+        <!-- Map Column -->
+        <div class="map-container">
+          <p class="section__text__p1">I'm somewhere around Here 🧐</p>
+          <h1 class="title">Marietta</h1>
+          <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52955.44174950055!2d-84.58357125391537!3d33.94845478907932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f510968647065d%3A0xb18756c6328ee981!2sMarietta%2C%20GA!5e0!3m2!1sen!2sus!4v1706571546402!5m2!1sen!2sus" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    
+        <!-- Form Column -->
+        <div class="form-container">
+          <p class="section__text__p1">Send Me A Good Book to Read 📚</p>
+          <h1 class="title">Book Recommendations</h1>
+          <form id="quote-form">
+            <label for="name"> Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="mdholder74@gmail.com">Book Title:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="quote">What is interesting about this book:</label>
+            <textarea id="quote" name="quote" rows="4" required></textarea><br>
+            <button type="submit">Submit</button>
+          </form>
         </div>
       </div>
     </section>
 
-    <section >
-      <div>
-        <p class="section__text__p1">My Location</p>
-        <h1 class="title">Map</h1>
-        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52955.44174950055!2d-84.58357125391537!3d33.94845478907932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f510968647065d%3A0xb18756c6328ee981!2sMarietta%2C%20GA!5e0!3m2!1sen!2sus!4v1706571546402!5m2!1sen!2sus" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </section>
-
     <footer>
+      <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Email Me</h1>
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <img
+              src="./assets/email.png"
+              alt="Email icon"
+              class="icon contact-icon email-icon"
+            />
+            <p><a href="mailto:mdholder74@gmail.com">mdholder74@gmail.com</a></p>
+          </div>
+        </div>
+      </section>
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
+            <li><a href="#resume">Resume</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Contact Me</a></li>
           </ul>
         </div>
       </nav>
       <p>Copyright &#169; 2024. Author: Moe Holder. All Rights Reserved.</p>
     </footer>
+    
     <script src="script.js"></script>
   </body>
 </html>
