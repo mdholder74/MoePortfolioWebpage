@@ -483,7 +483,154 @@ article{
     background-color: #0056b3;
   }
   
+  #faq-frequently-asked-title{
+    text-align: center;
+    margin: 3rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+#section-faq{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.0rem;
+    margin: 4rem;
+}
 
+#section-comedy-faq, #section-serious-faq {
+    border: 3px solid rgb(11, 33, 102);
+    width: 600px;
+    height: 450px;
+    padding: 2rem 2rem;
+
+}
+
+.faq-spacing{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.faq-question-text{
+    display: block;
+    position: relative;
+    font-size: large;
+    font-weight: bold;
+
+}
+
+/* creating arrow */
+.faq-question-text:after {
+    width: 10px;
+    height: 10px;
+    content: "";
+    float: right;
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    transform: rotate(135deg);
+    transition: 0.4s ease-in-out;   
+}
+
+.faq-answer{
+    line-height: 1.5;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.faq-trigger{
+    display: none;
+}
+
+.faq-trigger:checked + .faq-question-text + .faq-answer{
+
+    max-height: 300px;
+}
+
+.faq-trigger:checked + .faq-question-text::after{
+    transform: rotate(-45deg);
+    transition: 0.4;
+}
+
+fieldset{
+    text-align: center;
+    border: 5px solid rgb(11, 33, 102);
+    border-radius: 5px;
+    min-width: 340px;
+    max-width: 350px;
+    min-height: 550px;
+    margin: 0 auto;
+}
+
+
+.section-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+    margin-bottom: 5rem;
+}
+
+legend{
+    color: rgb(11, 33, 102);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.vibes-label{
+    display: block;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    font-weight: bold;
+}
+
+.vibes-input{
+    border: 3px solid rgb(11, 33, 102);
+    padding: 8px 10px;
+    background-color: rgba(241, 241, 124, 0.993);
+    border-radius: 5px;
+}
+
+#vibes-submit {
+    padding: 10px 10px; 
+    background-color:rgba(239, 239, 16, 0.998);
+    color: rgb(11, 33, 102);  
+    border: 3px solid  rgb(11, 33, 102);
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1em;
+
+}
+
+#vibes-submit:hover{
+    background-color: rgb(11, 33, 102);
+    color: white;
+}
+
+.wrapper-main{
+    width: 900px;
+    margin: 0 auto;
+}
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+/* adds styling to the table headers */
+  th {
+    background-color: rgba(239, 239, 16, 0.998);
+    color: rgb(11, 33, 102);
+    font-weight: bold;
+    padding: 0.8rem;
+  }
+
+  /* adds styling to the table data cells  */
+  td {
+    background-color: rgba(241, 241, 124, 0.993);
+    color: rgb(11, 33, 102);
+    font-size: 18px;
+    padding: 0.8rem;
+  }
 
 /* BOOK RECOMMENDATIONS SECTION*/
 form {
