@@ -375,39 +375,19 @@ header {
 }
 
 
-/* BUTTONS*/
-
-#about{
-    position:relative;
-    
-}
-
-.about-containers{
-    gap:2rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-
-}
-
+/* ABOUTME SECTION */
+.about-containers
+{
+    display:flex;
+} 
 .about-details-container{
     justify-content: center;
     flex-direction: column;
 }
 
-.about-containers,
-.about-details-container{
-    display:flex;
-}
-
 .about-pic{
     border-radius:2rem;
     height:18rem;
-}
-.arrow{
-    position:absolute;
-    right:-5rem;
-    bottom:2.5rem;
-
 }
 
 .details-container{
@@ -420,34 +400,18 @@ header {
     text-align:center;
 }
 
-.section-container{
-    gap:4rem;
-    height:80%;
-    
-}
-
-.section__pic-container{
-    height:400px;
-    width:400px;
-    margin:auto 0;
-}
-
-#experience{
+/*SKILLS SECTION*/
+#skills{
     position:relative;
 }
 
-.experience-sub-title{
+.skills-sub-title{
     color:rgb(85,85,85);
     font-weight:600;
     font-size: 1.75rem;
     margin-bottom:2rem;
 }
 
-.experience-details-container{
-    justify-content: center;
-    display:flex;
-    flex-direction:column;
-}
 
 .article-container{
     display:flex;
@@ -466,91 +430,159 @@ article{
 }
 
 
-
-.key-features {
-    margin-bottom: 1%;
-}
-
-
 /* PROJECTS SECTION */
-
-.work-experience {
-	.jobs {
-		display:flex;
-		gap:30px;
-		.project-example {
-			background-color: var(--yellow-100);
-			padding:30px;
-			border-radius:30px;
-			flex:1;
-			h3 {
-				margin-top:20px;
-				margin-bottom:10px;
-			}
-			.project-setup {
-				font-weight:600;
-				margin-bottom:5px;
-				color: var(--base-800);
-			}
-			.project-p {
-				margin-bottom:10px;
-			}
-			figure {
-				width:100%;
-				padding-top:56.25%;
-				overflow:hidden;
-				position:relative;
-				border-radius:15px;
-				img {
-					position:absolute;
-					top:0;
-					left:0;
-					height:100%;
-					object-fit:cover;
-					transition: ease 3s all;
-				}
-				figcaption {
-					position:absolute;
-					bottom:0;
-					left:0;
-					right:0;
-					background-color: rgba(0,0,0,0.5);
-					color: var(--base-100);
-					text-align:center;
-					padding:10px;
-					opacity:0;
-					visibility:hidden;
-					transition: ease 0.3s all;
-				}
-
-				&:hover {
-					figcaption {
-						opacity:1;
-						visibility:visible;
-					}
-					img {
-						transform: scale(1.2);
-					}
-				}
-
-			}
-		}
-	}
-}
-
-#contact{
+  
+  /* Flexbox for Container */
+  .experience-details-container {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
-    flex-direction:column;
+    margin-top: 20px;
+  }
+  
+  /* Individual Project Card */
+  .project-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Image Styling */
+  .project-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  /* Buttons */
+  .btn-container {
+    margin-top: 15px;
+  }
+  
+  .project-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  
+  .project-btn:hover {
+    background-color: #0056b3;
+  }
+  
+
+
+/* BOOK RECOMMENDATIONS SECTION*/
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-.contact-info-upper-container{
-    display:flex;
+label {
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 12px;
+    background-color: #a2a7ac;
+    color: #0c0c0c;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333435;
+}
+
+  form#quote-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form#quote-form label,
+  form#quote-form input,
+  form#quote-form textarea,
+  form#quote-form button {
+    margin-bottom: 10px;
+  }
+  
+  form#quote-form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  form#quote-form button:hover {
+    background-color: #45a049;
+  }
+
+  label {
+    
+    font-weight: bold;
+  }
+  
+/* MAP SECTION*/
+#map{
+
+    border-radius: 5%;
+    border-width: 3px;
+    border-style: solid; 
     justify-content: center;
+}
+
+  .map-container{
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin: 10px;
+    min-width: 400px; /* Adjust this value as needed for responsiveness */
+  }
+
+ 
+  .form-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  
+  iframe#map {
+    width: 100%;
+    height: 390px;
+    border: 0;
+  }
+  
+/* CONTACT SECTION*/
+.contact-info-upper-container{
     border-radius: 2rem;
     border:rgb(53,53,53) 0.1rem solid;
     border-color:rgb(163,163,163);
-    background:(250, 250,250);
     margin: 2rem auto;
     padding:0.5rem;
 }
@@ -585,100 +617,4 @@ footer p{
     text-align:center;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 8px;
-}
-
-input, textarea {
-    padding: 10px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    padding: 12px;
-    background-color: #a2a7ac;
-    color: #0c0c0c;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #333435;
-}
-
-
-#map{
-
-    border-radius: 5%;
-    border-width: 3px;
-    border-style: solid; 
-    justify-content: center;
-
-
-}
-
-.map-form-container{
-    columns: 2;
-}
-
-  .map-container,
-  .form-container {
-    flex: 1;
-    margin: 10px;
-    min-width: 400px; /* Adjust this value as needed for responsiveness */
-  }
-  
-  .map-container,
-  .form-container {
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-  }
-  
-  
-  iframe#map {
-    width: 100%;
-    height: 390px;
-    border: 0;
-  }
-  
-  form#quote-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  form#quote-form label,
-  form#quote-form input,
-  form#quote-form textarea,
-  form#quote-form button {
-    margin-bottom: 10px;
-  }
-  
-  form#quote-form button {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  form#quote-form button:hover {
-    background-color: #45a049;
-  }
-
-  label {
-    
-    font-weight: bold;
-  }
-  
 
