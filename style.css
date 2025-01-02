@@ -58,8 +58,6 @@ section, footer {
 
 */
 /*SECTION STYLES*/
-
-
 .section__text{
     .section__text__p1{
         text-align: center;
@@ -76,11 +74,6 @@ section, footer {
         font-weight:600;
     }
 }
-
-
-
-
-
 /* LOGO */
 header {
 	padding-top:10px;
@@ -148,7 +141,6 @@ header {
     }
 
 }
-
 /* HAMBURGER MENU */
 #hamburger-nav{
     display:none; 
@@ -213,18 +205,7 @@ header {
     }
  
 }
-
-
-
 /*HERO SECTION*/
-.profile-container{
-    max-width: 1440px;
-    margin: auto; 
-    gap: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
 .profile-container {
     display:flex;
     
@@ -243,7 +224,7 @@ header {
     
     .section__text{
         flex:1;
-            background-color: var(--blue-100);
+            background-color: var(--soft-blue);
             border-radius:30px;
             display:flex;
             flex-direction:column;
@@ -273,10 +254,7 @@ header {
         background: var(--orange-hover);
         
     }
-    
-  
     /* STYLING SOCIAL BUTTONS*/
-
     .btn-container{
         display: flex;
         justify-content:center;
@@ -290,41 +268,30 @@ header {
         width:8rem;
         border-radius: 2rem;
     }
-
-    .btn-color-1,
     .btn-color-2{
-        border: var(--dark-grey) 0.1rem solid;
+        background:  var(--light-grey);
+        border: none;
+        
     }
+    .btn-color-1{
+        background:  var(--black);
+        color:var(--white);
+        border: none;
+    }
+    .btn-color-1:hover{
+        background: var(--white);
+        color: var(--black);
 
+    }
+    .btn-color-2:hover{
+        background:  var(--black);
+        color:var(--light-grey);
+    }
     .btn-color-1:hover,
     .btn-color-2:hover{
         cursor:pointer;
     }
 
-    .btn-color-1,
-    .btn-color-2:hover{
-        background:  var(--black);
-        color:var(--light-grey);
-    }
-
-    .btn-color-1:hover{
-        background: var(--black);
-
-    }
-
-    .btn-color-2{
-        background:  var(--light-grey)
-        
-    }
-
-    .btn-color-2:hover{
-        border: var(--light-grey) 0.1rem solid;
-    }
-
-    .btn-container{
-        gap:1rem;
-    }
-    
 }
 
 /* ABOUTME SECTION */
