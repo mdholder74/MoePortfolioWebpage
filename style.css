@@ -11,6 +11,7 @@
     --dark-grey: #353535;
 	--black: #000;
 	--soft-teal: #4bffc3c9;
+    --soft-blue: #c2f6fe;
 	--light-blue: #61dafb;
     --dark-blue: #0a61ae;
     --blue-hover: #1136da; 
@@ -55,10 +56,29 @@ section, footer {
     border-radius: 10px;
 }
 
-.bg-white {
-    background-color: #fff;
-}
 */
+/*SECTION STYLES*/
+
+
+.section__text{
+    .section__text__p1{
+        text-align: center;
+    }
+
+    .title{
+        font-size: 3rem;
+        text-align: center;
+    }
+    .job-title{
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-weight:600;
+    }
+}
+
+
+
 
 
 /* LOGO */
@@ -134,91 +154,67 @@ header {
     display:none; 
     flex-direction:column;
     align-items:center;
+    .hamburger-menu{
+        position: relative;
+        display: inline-block;
+    }
+    .hamburger-icon{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 24px;
+        width: 30px;
+        cursor: pointer;
+        margin-right: 30px;
+    
+    }
+    .hamburger-icon span{
+        width: 100%;
+        height: 2px;
+        background-color: var(--black);
+        transition: all 0.3 ease-in-out;
+    
+    }
+    .menu-links{
+        display:none;
+        flex-direction:column;
+        text-align:center;
+        width:100%;
+        list-style:none;
+        gap:1rem;
+    
+    }
+    
+    .menu-links a{
+        width:100%;
+    
+    }
+    
+    .menu-links.open{
+        display:flex;
+    }
+    
+    .hamburger-icon.open span:first-child{
+    
+        transform: rotate(45deg) translate(10px, 5px);  
+    }
+    
+    .hamburger-icon.open span:nth-child(2){
+        opacity: 0;  
+    }
+    
+    .hamburger-icon.open span:last-child{
+        transform: rotate(-45deg) translate(10px, -5px);  
+    }
+    
+    .hamburger-icon span:first-child {
+        transform: none;
+        opacity: 1;
+    }
  
 }
 
-.hamburger-menu{
-    position: relative;
-    display: inline-block;
-}
 
-.hamburger-icon{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 24px;
-    width: 30px;
-    cursor: pointer;
-    margin-right: 30px;
-
-}
-
-.hamburger-icon span{
-    width: 100%;
-    height: 2px;
-    background-color: var(--black);
-    transition: all 0.3 ease-in-out;
-
-}
-
-.menu-links{
-    display:none;
-    flex-direction:column;
-    text-align:center;
-    width:100%;
-    list-style:none;
-    gap:1rem;
-
-}
-
-.menu-links a{
-    width:100%;
-
-}
-
-.menu-links.open{
-    display:flex;
-}
-
-.hamburger-icon.open span:first-child{
-
-    transform: rotate(45deg) translate(10px, 5px);  
-}
-
-.hamburger-icon.open span:nth-child(2){
-    opacity: 0;  
-}
-
-.hamburger-icon.open span:last-child{
-    transform: rotate(-45deg) translate(10px, -5px);  
-}
-
-.hamburger-icon span:first-child {
-    transform: none;
-    opacity: 1;
-}
-
-
-/*SECTION STYLES*/
-.section__text p{
-    font-weight:600;
-
-}
-
-.section__text__p1{
-    text-align: center;
-}
-
-.section__text__p2{
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.title{
-    font-size: 3rem;
-    text-align: center;
-}
 
 /*HERO SECTION*/
 .profile-container{
@@ -529,7 +525,7 @@ article{
 }
 
 #section-serious-faq{
-    background-color: var(--blue-100);
+    background-color: var(--soft-blue);
 }
 .faq-spacing{
     margin-top: 1rem;
