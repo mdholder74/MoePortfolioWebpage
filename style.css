@@ -15,6 +15,7 @@
 	--blue-100: #e2f8ff;
 	--blue-400: #61dafb;
 	--blue-800: #0a61ae;
+    --pink: #ffd4f8;
 }
 
 body{
@@ -36,7 +37,7 @@ a,
 }
 
 /* GLOBAL STYLES */
-section{
+section, footer{
     max-width: 1440px;
     margin: auto; 
     gap: 30px;
@@ -442,10 +443,6 @@ article{
 
 }
 
-
-
-
-
 /* PROJECTS SECTION */
   
   /* Flexbox for Container */
@@ -473,7 +470,7 @@ article{
   /* Image Styling */
   .project-img {
     max-width: 100%;
-    height: auto;
+    height: 200px;
     border-radius: 10px;
     margin-bottom: 15px;
   }
@@ -487,7 +484,7 @@ article{
     padding: 10px 20px;
     font-size: 16px;
     color: #fff;
-    background-color: var(--teal);
+    background-color: var(--blue-400);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -496,24 +493,34 @@ article{
   }
   
   .project-btn:hover {
-    background-color: var(--teal-800);
+    background-color: var(--blue-800);
   }
+
 /* FAQ SECTION */
 #section-faq{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1rem;
+
 }
 
 #section-comedy-faq, #section-serious-faq {
-    border: 3px solid ;
+    border: none ;
     width: 600px;
     height: 450px;
     padding: 2rem 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
 
 }
+#section-comedy-faq{
+    background-color: var(--pink);
+}
 
+#section-serious-faq{
+    background-color: var(--blue-100);
+}
 .faq-spacing{
     margin-top: 1rem;
     margin-bottom: 2rem;
@@ -570,11 +577,12 @@ article{
 fieldset{
     text-align: center;
     border: 5px solid var(--base-800);
-    border-radius: 5px;
+    border-radius: 2px;
     min-width: 340px;
     max-width: 350px;
     min-height: 550px;
     margin: 0 auto;
+
 }
 .smaller-p-text{
     font-size: .9rem;
@@ -585,10 +593,16 @@ fieldset{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    
 }
 
 legend{
-    color: var(--base-800);
+    color: var(--blue-400);
     font-size: 30px;
     font-weight: bold;
 }
@@ -607,10 +621,10 @@ legend{
 }
 
 #vibes-submit {
-    padding: 10px 10px; 
-
-    color: var(--base-800);  
-    border: 3px solid  var(--base-800);
+    padding: 10px 15px; 
+    background-color: var(--blue-400);
+    color: var(--base-100);  
+    border: none;
     border-radius: 5px;
     cursor: pointer;
     margin: 1em;
@@ -618,8 +632,8 @@ legend{
 }
 
 #vibes-submit:hover{
-    background-color: var(--base-800);
-    color: white;
+    background-color: var(--blue-800);
+    
 }
 
 .wrapper-main{
