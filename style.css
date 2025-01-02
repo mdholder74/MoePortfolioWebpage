@@ -28,7 +28,7 @@ html{
     scroll-behavior: smooth;
 }
 
-p{
+p, .skills-sub-title{
     color:var(--grey);
 }
 
@@ -44,19 +44,6 @@ section, footer {
     margin: 30px auto;
     gap: 30px;
 }
-
-/* Utilities 
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.border-rounded {
-    border-radius: 10px;
-}
-
-*/
 /*SECTION STYLES*/
 .section__text{
     .section__text__p1{
@@ -305,6 +292,10 @@ header {
         border:var(--dark-grey) 0.1rem solid;
         border-color:var(--light-grey);
         text-align:center;
+        .icon{
+            height:2rem; 
+        
+        }
     } 
 } 
 #about-section {
@@ -329,6 +320,7 @@ header {
                 p {
                     margin-bottom:20px;
                 }
+                
 
 }
 
@@ -347,7 +339,6 @@ header {
         padding: 20px;
     }
     .icon{
-        cursor:pointer;
         height:2rem; 
     
     }
@@ -569,9 +560,7 @@ footer{
 
 /*TO DO LIST SECTION
 email me button not working
-Skills section not responsive
-project images to small
-faqs not responsive
+project images too small
 add mediaqueries 
 add AI Chatbox*/
 
