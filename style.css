@@ -35,6 +35,16 @@ a,
     transition: all 300ms ease;
 }
 
+/* GLOBAL STYLES */
+section{
+    max-width: 1440px;
+    margin: auto; 
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
 /* LOGO */
 header {
 	padding-top:10px;
@@ -311,31 +321,88 @@ header {
 }
 
 /* ABOUTME SECTION */
-.about-containers
-{
+
+ .about-container{
     display:flex;
+    gap:2rem;
+    .about-details-container{
+        padding:1.5rem;
+        flex:1;
+        background:white;
+        border-radius:2rem;
+        border:rgb(53,53,53) 0.1rem solid;
+        border-color:rgb(163,163,163);
+        text-align:center;
+    } 
 } 
-.about-details-container{
+
+#about-section {
+	.holder-blue {
+		background-color: var(--teal);
+		border-radius:30px;
+		padding:30px;
+		display:flex;
+		.left-column {
+			flex:1;
+					padding:10px 20px;
+					border-radius:15px;
+					margin-bottom:10px;
+				}
+                .about-pic{
+                    border-radius:2rem;
+                    height:18rem;
+                }
+			}
+        .right-column {
+            flex:1;
+                p {
+                    margin-bottom:20px;
+                }
+
+}
+
+}
+
+/*SKILLS SECTION*/
+#skills-section{
+    position:relative;
+}
+.skills-details-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
-    flex-direction: column;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: var(--blue-400);
+  }
+
+.skills-sub-title{
+    color:rgb(85,85,85);
+    font-weight:600;
+    font-size: 1.75rem;
+    margin-bottom:2rem;
 }
 
-.about-pic{
-    border-radius:2rem;
-    height:18rem;
+
+.article-container{
+    display:flex;
+    text-align:initial;
+    flex-wrap:wrap;
+    flex-direction: row;
+    gap:2.5rem;
+    justify-content:space-around;
+
 }
 
-.details-container{
-    padding:1.5rem;
-    flex:1;
-    background:white;
-    border-radius:2rem;
-    border:rgb(53,53,53) 0.1rem solid;
-    border-color:rgb(163,163,163);
-    text-align:center;
+article{
+    display:flex;
+    width:10rem;
+    justify-content:space-around;
+    gap:0.5rem;
 }
 
-/*STYLING ICON LOGOS SECTION*/
+/*STYLING SKILLS LOGOS SECTION*/
 .logos {
 	background-color: var(--base-100);
 	border-radius:30px;
@@ -375,57 +442,8 @@ header {
 
 }
 
-#about {
-	.holder-blue {
-		background-color: var(--blue-100);
-		border-radius:30px;
-		padding:30px;
-		display:flex;
-		.left-column {
-			flex:1;
-					padding:10px 20px;
-					border-radius:15px;
-					margin-bottom:10px;
-				}
-			}
-        .right-column {
-            flex:1;
-                p {
-                    margin-bottom:20px;
-                }
-
-}
-
-}
-
-/*SKILLS SECTION*/
-#skills{
-    position:relative;
-}
-
-.skills-sub-title{
-    color:rgb(85,85,85);
-    font-weight:600;
-    font-size: 1.75rem;
-    margin-bottom:2rem;
-}
 
 
-.article-container{
-    display:flex;
-    text-align:initial;
-    flex-wrap:wrap;
-    flex-direction: row;
-    gap:2.5rem;
-    justify-content:space-around;
-}
-
-article{
-    display:flex;
-    width:10rem;
-    justify-content:space-around;
-    gap:0.5rem;
-}
 
 
 /* PROJECTS SECTION */
@@ -481,18 +499,11 @@ article{
     background-color: var(--teal-800);
   }
 /* FAQ SECTION */
-  #faq-frequently-asked-title{
-    text-align: center;
-    margin: 3rem;
-    font-weight: bold;
-    font-size: 2rem;
-}
 #section-faq{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.0rem;
-    /* margin: 4rem; */
+    font-size: 1rem;
 }
 
 #section-comedy-faq, #section-serious-faq {
@@ -508,6 +519,12 @@ article{
     margin-bottom: 2rem;
 }
 
+.header-faqs{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
 .faq-question-text{
     display: block;
     position: relative;
@@ -516,7 +533,7 @@ article{
 
 }
 
-/* creating arrow */
+/* creating dropdown arrow */
 .faq-question-text:after {
     width: 10px;
     height: 10px;
@@ -549,6 +566,7 @@ article{
     transition: 0.4;
 }
 
+/* FORM SECTION */
 fieldset{
     text-align: center;
     border: 5px solid var(--base-800);
@@ -558,14 +576,15 @@ fieldset{
     min-height: 550px;
     margin: 0 auto;
 }
+.smaller-p-text{
+    font-size: .9rem;
 
+}
 
 .section-form{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-top: 8rem; */
-    /* margin-bottom: 5rem; */
 }
 
 legend{

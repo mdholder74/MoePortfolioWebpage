@@ -21,7 +21,6 @@
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="mailto:mdholder74@gmail.com" class="button-contactme">Contact Me</a></li>
         </ul>
       </div>
     </nav>
@@ -38,7 +37,6 @@
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact Me</a></li>
         </div>
       </div>
     </nav>
@@ -79,13 +77,11 @@
         </div>
       </div>
     </section>
-    <section id="about">
+    <section id="about-info-section">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
+          <div class="about-container">
+            <div class="about-details-container">
               <img
                 src="./assets/experience.png"
                 alt="Experience icon"
@@ -94,7 +90,7 @@
               <h3>Experience</h3>
               <p>Software Development<br/>Information Technology<br/>Human Resources</p>
             </div>
-            <div class="details-container">
+            <div class="about-details-container">
               <img
                 src="./assets/education.png"
                 alt="Education icon"
@@ -107,7 +103,7 @@
         </div>
       </div>
       </section>
-      <section id="about">
+      <section id="about-section">
         <div class="holder-blue">
       <div class="left-column">
         <img src="./assets/AtlantaSkyLine.jpg" alt="Picture of my home town charlotte-north-carolina-city-skyline" class="about-pic"/>
@@ -125,11 +121,10 @@
       </div>
     </div>
     </section>
-    <section id="skills">
+    <section id="skills-section">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Skills</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
+      <div class="skills-details-container">
           <div class="details-container">
             <div class="frontend">
             <h2 class="skills-sub-title">Frontend</h2>
@@ -259,12 +254,14 @@
                   <img src="./assets/react.png" width="128" alt="React" />
                   <img src="./assets/nextjs.png" width="128" alt="Next JS" />
                   <img src="./assets/vscode.png" width="128" alt="VS Code" />
+                  <img src="./assets/python.png" width="128" alt="Python" />
                   <img src="./assets/html.png" alt="HTML" width="128" />
                   <img src="./assets/css.png" alt="CSS" width="128" />
                   <img src="./assets/javascript.png" alt="JS" width="128" />
                   <img src="./assets/react.png" width="128" alt="React" />
                   <img src="./assets/nextjs.png" width="128" alt="Next JS" />
                   <img src="./assets/vscode.png" width="128" alt="VS Code" />
+                  <img src="./assets/python.png" width="128" alt="Python" />
                 </div>
               </div>
        
@@ -313,13 +310,7 @@
       <section id="section-faq">
             <section id="section-comedy-faq">
                 <div class="faq-spacing">
-                    <input type="checkbox" class="faq-trigger" id="faq-trigger-1">
-                    <label class="faq-question-text" for="faq-trigger-1">Q. How tall are you?</label>
-                    <div class="faq-answer">
-                        <p>A: A proud 5 feet! I bring all the personality of someone taller… with a little less reach.</p>
-                    </div>
-                </div>
-                <div class="faq-spacing">
+                  <h2 class="header-faqs">Just for Laughs</h2>
                     <input type="checkbox" class="faq-trigger" id="faq-trigger-2">
                     <label class="faq-question-text" for="faq-trigger-2">Q: What's your hidden talent?</label>
                     <div class="faq-answer">
@@ -343,6 +334,7 @@
             </section>
             <section id="section-serious-faq">
                 <div class="faq-spacing">
+                  <h2 class="header-faqs">Professional Insights</h2>
                     <input type="checkbox" class="faq-trigger" id="faq-trigger-5">
                     <label class="faq-question-text" for="faq-trigger-5">Q: What's your experience with technology?</label>
                     <div class="faq-answer">
@@ -365,20 +357,13 @@
                         <p>A: Let’s just say I measured the width of my own pinky nail once, just to make sure it’s accurate. So yes, details are definitely my thing.</p>
                     </div>
                 </div>
-                <div class="faq-spacing">
-                    <input type="checkbox" class="faq-trigger" id="faq-trigger-8">
-                    <label class="faq-question-text" for="faq-trigger-8">Q: How do you stay current with your skills?</label>
-                    <div class="faq-answer">
-                        <p>A: I’m constantly learning, whether it’s developing my programming skills, studying for certifications or attending tech conferences. </p>
-                    </div>
-                </div>
             </section>
         </section>
         <section class="section-form">
             <fieldset>
-                <p>I’m currently jobless and trying my hand at comedy.</p>
-                <p>So technically, I’m either on the brink of fame or just really, really unemployed!</p>
-                <legend>Send Good Vibes  </legend>
+                <p class="smaller-p-text">Currently jobless and trying my hand at comedy.</p>
+                <p class="smaller-p-text">So technically, I’m either on the brink of fame or just really, really unemployed!</p>
+                <legend>Send a positive quote  </legend>
                 <label class="vibes-label" for="fName">First Name</label>
                 <input class="vibes-input" type="text" id="fName" name="fName">
                 <label class="vibes-label" for="lName" >Last Name</label>
@@ -391,8 +376,8 @@
                 <input type="submit" value="submit" id="vibes-submit">
             </fieldset>
             <fieldset>
-                <p>Knowledge is Powerful</p>
-                <p>Send Me A Good Book to Read 📚</p>
+                <p class="smaller-p-text">Knowledge is Powerful</p>
+                <p class="smaller-p-text">Send Me A Good Book to Read 📚</p>
                 <legend>Book Ideas  </legend>
                 <label class="vibes-label" for="fName">Author</label>
                 <input class="vibes-input" type="text" id="fName" name="fName">
