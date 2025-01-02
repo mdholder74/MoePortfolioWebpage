@@ -54,6 +54,7 @@ header {
 	justify-content:space-between;
 	max-width:1440px;
 	margin:auto;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 
 	.logo-holder {
 		display:flex;
