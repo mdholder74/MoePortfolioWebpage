@@ -9,10 +9,8 @@
 	--base-100: #f1f1f1;
 	--base-400: #555;
 	--base-800: #000;
-	--yellow: #ffda4b;
-	--yellow-100: #fffbe6;
-	--yellow-400: #ffda4b;
-	--yellow-800: #8b6f00;
+	--teal: #4bffc3c9;
+    --teal-800: #05e69b;
 	--blue: #0a61ae;
 	--blue-100: #e2f8ff;
 	--blue-400: #61dafb;
@@ -215,14 +213,14 @@ header {
     
     .section__pic-container{
           flex:1;
-          background-color: var(--yellow);
           border-radius:30px;
           padding:30px;
           display:flex;
           justify-content:center;
           align-items:flex-end;
-          img {
+          #headshot-img{
               max-width:420px;
+              border-radius:30px;
           }
     }
     
@@ -312,6 +310,32 @@ header {
     
 }
 
+/* ABOUTME SECTION */
+.about-containers
+{
+    display:flex;
+} 
+.about-details-container{
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-pic{
+    border-radius:2rem;
+    height:18rem;
+}
+
+.details-container{
+    padding:1.5rem;
+    flex:1;
+    background:white;
+    border-radius:2rem;
+    border:rgb(53,53,53) 0.1rem solid;
+    border-color:rgb(163,163,163);
+    text-align:center;
+}
+
+/*STYLING ICON LOGOS SECTION*/
 .logos {
 	background-color: var(--base-100);
 	border-radius:30px;
@@ -372,32 +396,6 @@ header {
 
 }
 
-}
-
-
-/* ABOUTME SECTION */
-.about-containers
-{
-    display:flex;
-} 
-.about-details-container{
-    justify-content: center;
-    flex-direction: column;
-}
-
-.about-pic{
-    border-radius:2rem;
-    height:18rem;
-}
-
-.details-container{
-    padding:1.5rem;
-    flex:1;
-    background:white;
-    border-radius:2rem;
-    border:rgb(53,53,53) 0.1rem solid;
-    border-color:rgb(163,163,163);
-    text-align:center;
 }
 
 /*SKILLS SECTION*/
@@ -471,7 +469,7 @@ article{
     padding: 10px 20px;
     font-size: 16px;
     color: #fff;
-    background-color: #007bff;
+    background-color: var(--teal);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -480,9 +478,9 @@ article{
   }
   
   .project-btn:hover {
-    background-color: #0056b3;
+    background-color: var(--teal-800);
   }
-  
+/* FAQ SECTION */
   #faq-frequently-asked-title{
     text-align: center;
     margin: 3rem;
@@ -494,11 +492,11 @@ article{
     justify-content: center;
     align-items: center;
     font-size: 1.0rem;
-    margin: 4rem;
+    /* margin: 4rem; */
 }
 
 #section-comedy-faq, #section-serious-faq {
-    border: 3px solid rgb(11, 33, 102);
+    border: 3px solid ;
     width: 600px;
     height: 450px;
     padding: 2rem 2rem;
@@ -553,7 +551,7 @@ article{
 
 fieldset{
     text-align: center;
-    border: 5px solid rgb(11, 33, 102);
+    border: 5px solid var(--base-800);
     border-radius: 5px;
     min-width: 340px;
     max-width: 350px;
@@ -566,12 +564,12 @@ fieldset{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 8rem;
-    margin-bottom: 5rem;
+    /* margin-top: 8rem; */
+    /* margin-bottom: 5rem; */
 }
 
 legend{
-    color: rgb(11, 33, 102);
+    color: var(--base-800);
     font-size: 30px;
     font-weight: bold;
 }
@@ -584,17 +582,16 @@ legend{
 }
 
 .vibes-input{
-    border: 3px solid rgb(11, 33, 102);
+    border: 3px solid var(--base-800);
     padding: 8px 10px;
-    background-color: rgba(241, 241, 124, 0.993);
     border-radius: 5px;
 }
 
 #vibes-submit {
     padding: 10px 10px; 
-    background-color:rgba(239, 239, 16, 0.998);
-    color: rgb(11, 33, 102);  
-    border: 3px solid  rgb(11, 33, 102);
+
+    color: var(--base-800);  
+    border: 3px solid  var(--base-800);
     border-radius: 5px;
     cursor: pointer;
     margin: 1em;
@@ -602,7 +599,7 @@ legend{
 }
 
 #vibes-submit:hover{
-    background-color: rgb(11, 33, 102);
+    background-color: var(--base-800);
     color: white;
 }
 
@@ -616,152 +613,25 @@ legend{
     border-collapse: collapse;
   }
 
-/* adds styling to the table headers */
-  th {
-    background-color: rgba(239, 239, 16, 0.998);
-    color: rgb(11, 33, 102);
-    font-weight: bold;
-    padding: 0.8rem;
-  }
 
-  /* adds styling to the table data cells  */
-  td {
-    background-color: rgba(241, 241, 124, 0.993);
-    color: rgb(11, 33, 102);
-    font-size: 18px;
-    padding: 0.8rem;
-  }
-
-/* BOOK RECOMMENDATIONS SECTION*/
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 8px;
-}
-
-input, textarea {
-    padding: 10px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    padding: 12px;
-    background-color: #a2a7ac;
-    color: #0c0c0c;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #333435;
-}
-
-  form#quote-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  form#quote-form label,
-  form#quote-form input,
-  form#quote-form textarea,
-  form#quote-form button {
-    margin-bottom: 10px;
-  }
-  
-  form#quote-form button {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  form#quote-form button:hover {
-    background-color: #45a049;
-  }
-
-  label {
-    
-    font-weight: bold;
-  }
-  
 /* MAP SECTION*/
-#map{
-
-    border-radius: 5%;
-    border-width: 3px;
-    border-style: solid; 
-    justify-content: center;
-}
-
-  .map-container{
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    margin: 10px;
-    min-width: 400px; /* Adjust this value as needed for responsiveness */
-  }
-
- 
-  .form-container {
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-  }
-  
-  
-  iframe#map {
-    width: 100%;
-    height: 390px;
-    border: 0;
-  }
-  
-/* CONTACT SECTION*/
-.contact-info-upper-container{
-    border-radius: 2rem;
-    border:rgb(53,53,53) 0.1rem solid;
-    border-color:rgb(163,163,163);
-    margin: 2rem auto;
-    padding:0.5rem;
-}
-
-.contact-info-container{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:0.5rem;
-    margin:1rem;
-
-}
-
-.contact-info-container p{
-    font-size:larger;
-}
-
-.contact-icon{
-    cursor:default;
-}
-
-.email-icon{
-    height:2.5rem;
-}
-
 footer{
-    height:26vh;
-    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+iframe{
+    border-radius: 15px;
+    overflow: hidden;
+    width: 600px;
+    height: 500px;
+    border: 0;
 }
 
-footer p{
-    text-align:center;
-}
+
+  
+/* COPYRIGHT SECTION*/
+
 
 
