@@ -220,7 +220,7 @@ header {
     margin-bottom: 30px;
 }
 
-#profile {
+.profile-container {
     display:flex;
     
     .section__pic-container{
@@ -366,7 +366,7 @@ header {
 }
 
 /*SKILLS SECTION*/
-#skills-section{
+.skills-section{
     position:relative;
 }
 .skills-details-container {
