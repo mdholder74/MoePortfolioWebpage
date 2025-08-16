@@ -22,12 +22,20 @@
   --dark-grey: #334155;
   --black: #0f172a;
   --white: #ffffff;
-  --light-hero-gradient: linear-gradient(
+  --dark-hero-gradient: linear-gradient(
     135deg,
-    rgba(59, 130, 246, 0.15), /* soft blue tint */
-    rgba(20, 184, 166, 0.15), /* soft teal tint */
+    rgba(53, 121, 230, 0.507), 
+    rgba(20, 184, 165, 0.425), 
     var(--white)
   );
+    --light-hero-gradient: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.15), /* soft blue tint */
+    rgba(4, 124, 110, 0.15), /* soft teal tint */
+    var(--white)
+  );
+  --shadow-soft: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 20px 40px -4px rgba(0, 0, 0, 0.15), 0 8px 16px -4px rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -372,5 +380,82 @@ header {
     margin: 0;
 }
 
+/* INTRO SECTION */
+/* #intro-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+} */
+
+.holder-blue {
+    background: var(--dark-hero-gradient);
+    box-shadow: var(--shadow-soft);
+    border-radius: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.holder-blue:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px); /* Subtle lift on hover */
+        }
 
 
+.left-column {
+    flex: 0 0 45%;
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-pic {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+}
+
+.about-pic:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
+}
+
+.right-column {
+    flex: 1;
+    padding: 40px 40px 40px 0;
+    position: relative;
+    z-index: 1; /* Ensure text is above the overlay */
+}
+
+.right-column p {
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: 0.95;
+    transition: opacity 0.3s ease; /* Smooth transition for readability */
+}
+
+.right-column p:first-child {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    opacity: 1;
+}
+
+/* Highlight important text */
+.highlight {
+  background: linear-gradient(135deg, rgba(20, 184, 166, 0.15), rgba(59, 130, 246, 0.1));
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #0f766e;
+  border: 1px solid rgba(20, 184, 166, 0.2);
+}
