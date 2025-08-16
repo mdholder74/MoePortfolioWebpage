@@ -176,12 +176,9 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 4rem 2rem;
-  
-  /* Light gradient background */
   background: var(--light-hero-gradient);
-  color: var(--black); /* Dark text for contrast */
+  color: var(--black);
 }
-
 
 .hero-image-wrapper {
   flex: 1;
@@ -195,7 +192,7 @@ header {
   max-width: 420px;       /* keeps it from getting too big */
   aspect-ratio: 1 / 1;    /* keeps it a perfect square */
   object-fit: cover;      /* crops nicely inside the circle */
-  border-radius: 50%;     /* makes it circular */
+  border-radius: 50%;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
 }
@@ -287,3 +284,93 @@ header {
 .github:hover {
   background: var(--orange-hover);
 }
+
+/* EXPERIENCE SECTION */
+#experience-section {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 2rem;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-section-text {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.about-section-text p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+}
+
+.about-experience-row {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-experience-container {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    padding: 3rem;
+    flex: 1;
+    min-width: 500px;
+    background: white;
+    border-radius: 2rem;
+    border: var(--light-grey) 0.1rem solid;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.about-experience-container:hover {
+    transform: translateY(-5px);
+}
+
+.about-experience-details .about-icon {
+    height: 3rem;
+    width: 3rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: linear-gradient(135deg, var(--accent-teal), var(--primary-blue));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.about-experience-details h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.about-experience-details p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 16px;
+    margin: 0;
+}
+
+
+
