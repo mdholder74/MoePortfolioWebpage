@@ -1151,3 +1151,151 @@ header {
   }
 
 }
+
+.section-form {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+ 
+
+.section-form fieldset {
+  border-radius: 1.5rem;
+    text-align: center;
+    border: 5px solid var(--blue);
+    min-width: 340px;
+    max-width: 350px;
+    min-height: 550px;
+    margin: 0 auto;
+   padding: 2rem;
+   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+   position: relative;
+   overflow: hidden;
+}
+
+.section-form fieldset::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-blue),
+    var(--accent-teal)
+  );
+}
+
+.section-form fieldset:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+.section-form fieldset:nth-child(2)::before {
+  background: linear-gradient(90deg, #f59e0b, #ef4444);
+}
+
+.section-form fieldset legend {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(
+    135deg,
+    var(--primary-blue),
+    var(--accent-teal)
+  );
+  border-radius: 25px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-form fieldset:nth-child(2) legend {
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+}
+
+.section-form fieldset .smaller-p-text {
+  font-size: 0.9rem;
+  color: var(--grey);
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.section-form fieldset .smaller-p-text:first-of-type {
+  font-weight: 600;
+  color: var(--dark-grey);
+}
+
+.section-form fieldset .vibes-label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--dark-grey);
+  font-size: 0.9rem;
+}
+
+.section-form fieldset .vibes-input {
+  width: 100%;
+  padding: 0.6rem 0.0rem;
+  border: 2px solid var(--light-grey);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.section-form fieldset .vibes-input:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  transform: translateY(-1px);
+}
+
+.section-form fieldset .vibes-input:hover {
+  border-color: var(--grey);
+}
+
+.section-form fieldset textarea.vibes-input {
+  min-height: 100px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.section-form fieldset #vibes-submit {
+  background: linear-gradient(
+    135deg,
+    var(--primary-blue),
+    var(--accent-teal)
+  );
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.section-form fieldset #vibes-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.section-form fieldset #vibes-submit:active {
+  transform: translateY(0);
+}
+
+.section-form fieldset:nth-child(2) #vibes-submit {
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+}
+
