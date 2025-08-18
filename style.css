@@ -1299,3 +1299,18 @@ header {
   background: linear-gradient(135deg, #f59e0b, #ef4444);
 }
 
+/* MAP SECTION*/
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+  iframe {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    width: 600px;
+    height: 500px;
+    border: 5px solid teal;
+
+  }
