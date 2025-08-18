@@ -11,11 +11,13 @@
   </head>
   <body>
     <header id="#">
+      <!-- LOGO HEADER -->
       <div class="logo-holder">
         <div class="logo">M</div>
         <div class="logo-text">Moe's Portfolio!</div>
       </div>
-    <nav id="desktop-nav">
+      <!-- DESKTOP NAVIGATION -->
+      <nav id="desktop-nav">
         <ul class="nav-links">
           <li><a href="#">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -23,231 +25,232 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#chatbot">AI Chatbot</a></li>
         </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo"></div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+      </nav>
+      <!-- HAMBURGER MENU -->
+      <nav id="hamburger-nav">
+        <div class="hamburger-menu">
+          <div class="hamburger-icon-dash" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="hamburger-links">
+            <li><a href="#" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          </div>
         </div>
-        <div class="menu-links">
-          <li><a href="#" onclick="toggleMenu()">Home</a></li>
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+      </nav>
+    </header>
+    <main>
+      <!-- HERO SECTION -->
+      <section class="section-hero" id="home">
+        <div class="hero-content">
+          <p>Hey, I'm</p>
+          <h1 class="hero-name">Moe Holder</h1>
+          <p class="hero-role">Software Developer</p>
+          <div class="hero-btn-group">
+            <button
+              class="btn btn-resume"
+              onclick="window.open('../assets/MahoganyDanielleHolderResume2025.pdf');">
+              📄 View Resume
+            </button>
+            <button
+              class="btn btn-email"
+              onclick="window.location.href='mailto:mdholder74@gmail.com';"
+              onmouseover="this.innerText='mdholder74@gmail.com';"
+              onmouseout="this.innerText='Email Me';">
+              ✉️ Email Me
+            </button>
+          </div>
+          <p class="hero-social-label" style="margin-top: 20px;">Find me on</p>
+          <div class="hero-socials">
+            <img
+              src="./assets/linkedin.png"
+              alt="My LinkedIn profile"
+              class="social-icon linkedin"
+              onclick="location.href='https://www.linkedin.com/in/moeholder/' "
+            />
+            <img
+              src="./assets/github.png"
+              alt="My Github profile"
+              class="social-icon github"
+              onclick="location.href='https://github.com/mdholder74'"
+            />
+          </div>
         </div>
-      </div>
-    </nav>
-  </header> 
-  <main>
-    <section class="section-hero" id="home">
-      <div class="hero-content">
-      <p>Hey, I'm</p>
-      <h1 class="hero-name">Moe Holder</h1>
-      <p class="hero-role">Software Developer</p>
-      <div class="hero-btn-group">
-        <button
-        class="btn btn-resume"
-        onclick="window.open('../assets/MahoganyDanielleHolderResume2025.pdf');">
-        📄 View Resume
-        </button>
-        <button 
-        class="btn btn-email"
-        onclick="window.location.href='mailto:mdholder74@gmail.com';"
-        onmouseover="this.innerText='mdholder74@gmail.com';"
-        onmouseout="this.innerText='Email Me';">
-        ✉️ Email Me
-        </button>
-      </div>
-      <p class="hero-social-label" style="margin-top: 20px;">Find me on</p>
-      <div class="hero-socials">
-        <img
-        src="./assets/linkedin.png"
-        alt="My LinkedIn profile"
-        class="social-icon linkedin"
-        onclick="location.href='https://www.linkedin.com/in/moeholder/' "
-        />
-        <img
-        src="./assets/github.png"
-        alt="My Github profile"
-        class="social-icon github"
-        onclick="location.href='https://github.com/mdholder74'"
-        />
-      </div>
-      </div>
-            <div class="hero-image-wrapper">
-      <p><img src="assets/Moe Headshot 2.PNG" alt="Moe Holder profile picture" class="hero-image" /></p>
-      </div>
-    </section>
-
-    <section id="experience-section">
-  <div class="about-section-text">
-    <p>Get To Know More</p>
-    <h1 class="about-section-title">About Me</h1>
-  </div>
-
-  <div class="about-experience-row">
-    <div class="about-experience-container">
-      <div class="about-experience-details">
-        <div class="about-icon">💼</div>
-        <h3>Experience</h3>
-        <p>Software Development<br/>Information Technology<br/>Human Resources</p>
-      </div>
-    </div>
-
-    <div class="about-experience-container">
-      <div class="about-experience-details">
-        <div class="about-icon">🎓</div>
-        <h3>Education</h3>
-        <p>
-          Bachelors Degree (Computer Science) <br>
-          Software Engineering (Bootcamp) <br>
-          Masters Degree (Business Administration)
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="hero-image-wrapper">
+          <p><img src="assets/Moe Headshot 2.PNG" alt="Moe Holder profile picture" class="hero-image" /></p>
+        </div>
+      </section>
+      <!-- ABOUT SECTION -->
+      <section id="about-section">
+        <div class="section-text">
+          <p class="section-text-p1">Get To Know More</p>
+          <h1 class="section-title">About Me</h1>
+        </div>
+        <div class="about-experience-row">
+          <div class="about-experience-container">
+            <div class="about-experience-details">
+              <div class="about-icon">💼</div>
+              <h3>Experience</h3>
+              <p>Software Development<br/>Information Technology<br/>Human Resources</p>
+            </div>
+          </div>
+          <div class="about-experience-container">
+            <div class="about-experience-details">
+              <div class="about-icon">🎓</div>
+              <h3>Education</h3>
+              <p>
+                Bachelors Degree (Computer Science) <br>
+                Software Engineering (Bootcamp) <br>
+                Masters Degree (Business Administration)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- INTRO SECTION -->
       <section id="intro-section">
         <div class="holder-blue">
-      <div class="left-column">
-        <img src="./assets/AtlantaSkyLine.jpg" alt="Picture of my home town charlotte-north-carolina-city-skyline" class="about-pic"/>
-      </div>
-      <div class="right-column">
-        <p>
-          A little about me!
-        </p>
-        <p>
-          I'm located in <span class="highlight">Atlanta, GA</span>! I have a passion for learning and teaching whether through YouTube tutorials, certifications, or school.
-        </p>
-        <p>
-          I'm looking forward to joining a company that encourages <span class="highlight">innovative thinking</span>, embraces small failures as a learning opportunity, and solves problems which make meaningful impact on customers.
-        </p>
-        <p>
-          With over <span class="highlight">five years</span> of experience at Amazon, I have progressed from entry-level positions to leadership roles, gaining valuable insights along the way. This journey has equipped me well for both individual contributor and team leader positions.
-      </p>
-      </div>
-    </div>
-    </section>
-     <section id="skills">
-        <div class="section__text">
-            <p class="section__text__p1">Explore My</p>
-            <h1 class="title">Skills</h1>
+          <div class="left-column">
+            <img src="./assets/AtlantaSkyLine.jpg" alt="Picture of my home town charlotte-north-carolina-city-skyline" class="about-pic"/>
+          </div>
+          <div class="right-column">
+            <p>A little about me!</p>
+            <p>
+              I'm located in <span class="highlight">Atlanta, GA</span>! I have a passion for learning whether through YouTube tutorials, certifications, or school. I'm looking forward to graduating <span class="highlight">December 2026</span> with my Bachelor's Degree in Computer Science.
+            </p>
+            <p>
+              I'm looking forward to joining a company that encourages <span class="highlight">innovative thinking</span>, embraces small failures as a learning opportunity, and solves problems which make meaningful impact on customers.
+            </p>
+            <p>
+              With over <span class="highlight">five years</span> of experience at Amazon, I have progressed from entry-level positions to leadership roles, gaining valuable insights along the way. This journey has equipped me well for both individual contributor and team leader positions.
+            </p>
+          </div>
         </div>
-        
+      </section>
+      <!-- SKILLS SECTION -->
+      <section id="skills">
+        <div class="section-text">
+          <p class="section-text-p1 ">Explore My</p>
+          <h1 class="section-title">Skills</h1>
+        </div>
         <div class="skills-details-container">
-          
-            <div class="skills-article-container">
-                <h2 class="skills-sub-title">Frontend</h2>
-                <div class="skills-style">
-                    <div class="skill-item">
-                        <div class="skill-icon">✓</div>
-                        <div class="skill-info">
-                            <h3>HTML & CSS</h3>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="skill-icon">✓</div>
-                        <div class="skill-info">
-                            <h3>Agile/Scrum</h3>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="skill-icon">✓</div>
-                        <div class="skill-info">
-                            <h3>JavaScript</h3>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon">✓</div>
-                        <div class="skill-info">
-                            <h3>Angular</h3>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon">✓</div>
-                        <div class="skill-info">
-                            <h3>TypeScript</h3>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="skill-icon">✓</div>
-                        <div class="skill-info">
-                            <h3>Responsive Design</h3>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon">✓</div>
-                        <div class="skill-info">
-                            <h3>Browser DevTools</h3>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon">✓</div>
-                        <div class="skill-info">
-                            <h3>State Management</h3>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="skill-icon">✓</div>
-                        <div class="skill-info">
-                            <h3>React</h3>
-                        </div>
-                    </div>
+          <div class="skills-article-container">
+            <h2 class="skills-sub-title">Frontend</h2>
+            <div class="skills-style">
+              <div class="skill-item">
+                <div class="skill-icon">✓</div>
+                <div class="skill-info">
+                  <h3>HTML & CSS</h3>
                 </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">✓</div>
+                <div class="skill-info">
+                  <h3>Agile/Scrum</h3>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">✓</div>
+                <div class="skill-info">
+                  <h3>JavaScript</h3>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">✓</div>
+                <div class="skill-info">
+                  <h3>Angular</h3>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">✓</div>
+                <div class="skill-info">
+                  <h3>TypeScript</h3>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">✓</div>
+                <div class="skill-info">
+                  <h3>Responsive Design</h3>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">✓</div>
+                <div class="skill-info">
+                  <h3>Browser DevTools</h3>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">✓</div>
+                <div class="skill-info">
+                  <h3>State Management</h3>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">✓</div>
+                <div class="skill-info">
+                  <h3>React</h3>
+                </div>
+              </div>
             </div>
-            <div class="skills-article-container">
-                <h2 class="skills-sub-title">Backend</h2>
-                <div class="skills-style">
-                    <div class="skill-item">
-                        <div class="skill-icon">✓</div>
-                        <div class="skill-info">
-                            <h3>Node.js</h3>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="skill-icon">✓</div>
-                        <div class="skill-info">
-                            <h3>Express</h3>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="skill-icon">✓</div>
-                        <div class="skill-info">
-                            <h3>NoSQL</h3>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon">✓</div>
-                        <div class="skill-info">
-                            <h3>SQL</h3>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="skill-icon">✓</div>
-                        <div class="skill-info">
-                            <h3>Git</h3>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon">✓</div>
-                        <div class="skill-info">
-                            <h3>Entity Framework</h3>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon">✓</div>
-                        <div class="skill-info">
+          </div>
+          <div class="skills-article-container">
+            <h2 class="skills-sub-title">Backend</h2>
+            <div class="skills-style">
+              <div class="skill-item">
+                <div class="skill-icon">✓</div>
+                <div class="skill-info">
+                  <h3>Node.js</h3>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">✓</div>
+                <div class="skill-info">
+                  <h3>Express</h3>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">✓</div>
+                <div class="skill-info">
+                  <h3>NoSQL</h3>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">✓</div>
+                <div class="skill-info">
+                  <h3>SQL</h3>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">✓</div>
+                <div class="skill-info">
+                  <h3>Git</h3>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">✓</div>
+                <div class="skill-info">
+                  <h3>Entity Framework</h3>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">✓</div>
+                <div class="skill-info">
+                  <h3>APIs</h3>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">✓</div>
+                <div class="skill-info">
+                  <h3>Azure</h3>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">✓</div>
+                <div class="skill-info">
                             <h3>APIs</h3>
                         </div>
                     </div>
@@ -274,7 +277,7 @@
             </div>
         </div>
     </section>
-
+    <!-- LOGO MARQUEE SECTION -->
     <section class="logos container">
         <div class="marquee">
           <div class="track">
@@ -297,11 +300,11 @@
           </div>
         </div>
       </section>
-
+      <!-- PROJECTS SECTION -->
        <section id="projects">
-                <div class="section__text">
-                <p class="section__text__p1">Browse My Recent</p>
-                <h1 class="title">Projects</h1>
+                <div class="section-text">
+                <p class="section-text-p1 ">Browse My Recent</p>
+                <h1 class="section-title">Projects</h1>
               </div>
                 <div class="projects-details-container">
                   <!-- Project 1 -->
@@ -349,7 +352,7 @@
                    <!-- Project 3 -->
                   <div class="project-card">
                     <div class="article-container">
-                      <img src="./assets/To-do-App.png" alt="To Do List Application" class="project-img" />
+                      <img src="./assets/learning-dashboard.png" alt="To Do List Application" class="project-img" />
                       <h2 class="experience-sub-title project-title">Learning Dashboard</h2>
                         <div class="tech-stack">
                           <span class="tech-tag">React</span>
@@ -359,7 +362,7 @@
                       <p>Built a learning dashboard featuring courses with sign-up, code snippets, reviews, and detailed course views.</p>
                     </div>
                     <div class="btn-container">
-                      <button class="btn btn-color-2 project-btn" onclick="location.href='https://mdholder74.github.io/To-Do-List/'">
+                      <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/mdholder74/intern-atlas'">
                         View Project
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                           <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/>
@@ -369,16 +372,16 @@
                   </div>
                 </div>
               </section>
-
+              <!-- CHATBOT SECTION -->
                <section id="chatbot" class="chatbot-section">
-                <div class="section__text">
-                  <p class="section__text__p1">Lets Chat</p>
-                  <h1 class="title">🤖 AI Resume Assistant!</h1>
+                <div class="section-text">
+                  <p class="section-text-p1 ">Lets Chat</p>
+                  <h1 class="section-title">🤖 AI Resume Assistant! (🚧 Under Construction)</h1>
                   </div>
             <div class="chatbot-container">
                 <div class="chatbot-content">
                     <div class="chat-info">
-                        <p>Welcome to Moe's AI-powered resume assistant! I'm here to answer any questions about my professional background, technical skills, and experience.</p>
+                        <p>Welcome to Moe's AI-powered resume assistant! I'm here to answer any questions about her professional background, technical skills, and experience.</p>
                         <p><strong>Try asking:</strong></p>
                         <ul style="margin: 20px 0; padding-left: 20px;">
                             <li>"What programming languages does Moe know?"</li>
@@ -411,13 +414,14 @@
                 </div>
             </div>
         </section>
-
-         <div class="section__text">
-      <p class="section__text__p1">Still got questions</p>
-      <h1 class="title">FAQS</h1>
+        <!-- FAQ SECTION -->
+      <section id="faqs">
+      <div class="section-text">
+      <p class="section-text-p1 ">Still got questions</p>
+      <h1 class="section-title">FAQS</h1>
       </div>
-      <section id="section-faq">
-            <section id="section-comedy-faq">
+      <div class="faq-row">
+            <div id="section-comedy-faq">
                 <div class="faq-spacing">
                   <h2 class="header-faqs">Just for Laughs</h2>
                     <input type="checkbox" class="faq-trigger" id="faq-trigger-2">
@@ -440,8 +444,8 @@
                         <p>A: Oh, you mean my trusty car, Mater "shameless Cars plug"? Absolutely! He’s reliable and his motor from the windy city of Chicago to the sunshine state of Florida.</p>
                     </div>
                 </div>
-            </section>
-            <section id="section-serious-faq">
+            </div>
+            <div id="section-serious-faq">
                 <div class="faq-spacing">
                   <h2 class="header-faqs">Professional Insights</h2>
                     <input type="checkbox" class="faq-trigger" id="faq-trigger-5">
@@ -466,56 +470,43 @@
                         <p>A: Let’s just say I measured the width of my own pinky nail once, just to make sure it’s accurate. So yes, details are definitely my thing.</p>
                     </div>
                 </div>
-            </section>
+            </div>
+            </div>
         </section>
-
-         <section>
-            <div class="section__text">
-            <p class="section__text__p1">Share your</p>
-            <h1 class="title">Ideas and Positivity</h1>
+        <!-- BOOK FORM SECTION -->
+         <section id="book-form">
+            <div class="section-text">
+            <p class="section-text-p1 ">Share your</p>
+            <h1 class="section-title">Book Recommendations(🚧 Under Construction)</h1>
           </div>
           <div class="section-form">
-            <fieldset>
-                <p class="smaller-p-text">Currently jobless and trying my hand at comedy.</p>
-                <p class="smaller-p-text">So technically, I’m either on the brink of fame or just really, really unemployed!</p>
-                <legend>Send a positive quote  </legend>
-                <label class="vibes-label" for="fName">First Name</label>
-                <input class="vibes-input" type="text" id="fName" name="fName">
-                <label class="vibes-label" for="lName" >Last Name</label>
-                <input class="vibes-input" type="text" id="lName" name="lName">
-                <label class="vibes-label" for="email">Email</label>
-                <input class="vibes-input" type="email" id="email" name="email">
-                <label class="vibes-label" for="message">Insert your message</label>
-                <textarea class="vibes-input" name="message" id="message"></textarea>
-                <br><br>
-                <input type="submit" value="submit" id="vibes-submit">
-            </fieldset>
             <fieldset>
                 <p class="smaller-p-text">Knowledge is Powerful</p>
                 <p class="smaller-p-text">Send Me A Good Book to Read 📚</p>
                 <legend>Book Ideas  </legend>
-                <label class="vibes-label" for="fName">Author</label>
-                <input class="vibes-input" type="text" id="fName" name="fName">
-                <label class="vibes-label" for="lName" >Book Title</label>
-                <input class="vibes-input" type="text" id="lName" name="lName">
-                <label class="vibes-label" for="email">Genre</label>
-                <input class="vibes-input" type="email" id="email" name="email">
-                <label class="vibes-label" for="message">Insert your message</label>
-                <textarea class="vibes-input" name="message" id="message"></textarea>
+                <label class="book-form-label" for="fName">Author</label>
+                <input class="book-form-input" type="text" id="fName" name="fName">
+                <label class="book-form-label" for="lName">Book Title</label>
+                <input class="book-form-input" type="text" id="lName" name="lName">
+                <label class="book-form-label" for="genre">Genre</label>
+                <input class="book-form-input" type="text" id="genre" name="genre">
+                <label class="book-form-label" for="message">Insert your message</label>
+                <textarea class="book-form-input" name="message" id="message"></textarea>
                 <br><br>
-                <input type="submit" value="submit" id="vibes-submit">
+                <input type="submit" value="submit" id="book-submit">
             </fieldset>
           </div>
         </section>
-        <footer>
+        <!-- MAP SECTION-->
+        <footer id="map">
           <div class="map-container">
-            <div class="section__text">
-            <p class="section__text__p1">I'm somewhere around Here 🧐</p>
-            <h1 class="title">My Location</h1>
+            <div class="section-text">
+            <p class="section-text-p1 ">Remote, on-site, or interplanetary if it’s work, I’ll make it work</p>
+            <h1 class="section-title">My Location</h1>
           </div>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212271.40072285046!2d-84.42013055!3d33.7673675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5045d6993098d%3A0x66fede2f990b630b!2sAtlanta%2C%20GA!5e0!3m2!1sen!2sus!4v1735775639278!5m2!1sen!2sus"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-          <p>Copyright &#169; 2024. Author: Moe Holder. All Rights Reserved.</p>
+          <p>Copyright &#169; 2025. Author: Moe Holder. All Rights Reserved.</p>
     </footer>
 
 
