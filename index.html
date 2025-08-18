@@ -370,6 +370,49 @@
                 </div>
               </section>
 
+               <section id="chatbot" class="chatbot-section">
+                <div class="section__text">
+                  <p class="section__text__p1">Lets Chat</p>
+                  <h1 class="title">🤖 AI Resume Assistant!</h1>
+                  </div>
+            <div class="chatbot-container">
+                <div class="chatbot-content">
+                    <div class="chat-info">
+                        <p>Welcome to Moe's AI-powered resume assistant! I'm here to answer any questions about my professional background, technical skills, and experience.</p>
+                        <p><strong>Try asking:</strong></p>
+                        <ul style="margin: 20px 0; padding-left: 20px;">
+                            <li>"What programming languages does Moe know?"</li>
+                            <li>"Tell me about Moe's Amazon experience"</li>
+                            <li>"What projects has Moe worked on?"</li>
+                            <li>"What's Moe's educational background?"</li>
+                        </ul>
+                    </div>
+                    <div class="chat-box">
+                        <div class="chat-messages" id="chatMessages">
+                            <div class="message bot">
+                                <div class="message-avatar bot">AI</div>
+                                <div class="message-content">
+                                    👋 Hi there! I'm Moe's AI assistant. I know all about her professional background, skills, and experience. What would you like to know about her?
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="typing-indicator" id="typingIndicator">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        
+                        <div class="chat-input-container">
+                            <input type="text" id="chatInput" class="chat-input" placeholder="Ask me about Moe's experience, skills, projects..." maxlength="200">
+                            <button id="sendBtn" class="send-btn" onclick="sendMessage()">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
   </main>
     <script src="script.js"></script>
   </body>
