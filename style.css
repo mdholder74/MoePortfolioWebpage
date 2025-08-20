@@ -53,7 +53,7 @@ html {
 /* GLOBAL STYLES - Formats the <section> and <footer> elements */
 section,
 footer {
-  max-width: 1400px;
+  max-width: 1500px;
   margin: 20px auto;
   gap: 30px;
 }
@@ -99,7 +99,7 @@ header {
   padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
-  max-width: 1490px;
+  max-width: 1500px;
   margin: auto;
 }
 
@@ -128,7 +128,7 @@ header {
 }
 
 .logo-text {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--grey);
 }
 
@@ -139,7 +139,7 @@ header {
   margin: 2rem 0 2rem 0;
   gap: 2rem;
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .nav-links a {
