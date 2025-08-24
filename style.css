@@ -1282,7 +1282,7 @@ fieldset .book-submit-btn:active {
 /* Add this CSS to your style.css file to fix the message display */
 
 .success-message, .error-message {
-  display: none !important;
+  display: none;
   padding: 15px;
   border-radius: 10px;
   margin: 15px 0;
@@ -1295,20 +1295,20 @@ fieldset .book-submit-btn:active {
 }
 
 .success-message {
-  background: linear-gradient(135deg, #10b981, #059669) !important;
-  color: white !important;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
   border: 2px solid #059669;
 }
 
 .error-message {
-  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
-  color: white !important;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
   border: 2px solid #dc2626;
 }
 
 /* When displayed, override the display: none */
 .success-message[style*="block"], .error-message[style*="block"] {
-  display: block !important;
+  display: block;
   animation: slideDown 0.3s ease-out;
 }
 
