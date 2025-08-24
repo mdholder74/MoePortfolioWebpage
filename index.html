@@ -450,7 +450,7 @@
         <div class="section-text">
           <p class="section-text-p1">Lets Chat</p>
           <h1 class="section-title">
-            AI Resume Assistant! (🚧 Under Construction)
+            AI Resume Assistant!
           </h1>
         </div>
         <div class="chatbot-container">
@@ -601,45 +601,70 @@
         <div class="section-text">
           <p class="section-text-p1">Share your</p>
           <h1 class="section-title">
-            Book Recommendations(🚧 Under Construction)
+            Book Recommendations
           </h1>
         </div>
         <div class="section-form">
           <fieldset>
-            <p class="smaller-p-text">Knowledge is Powerful</p>
+            <p class="smaller-p-text">Knowledge is Power</p>
             <p class="smaller-p-text">Send Me A Good Book to Read 📚</p>
             <legend>Book Ideas</legend>
-            <label class="book-form-label" for="fName">Author</label>
+            <div class="success-message" id="successMessage">
+              📚 Thank you for your book recommendation! It has been saved
+              successfully.
+            </div>
+
+            <div class="error-message" id="errorMessage">
+              ❌ Please fill in all required fields.
+            </div>
+            <label class="book-form-label" for="author">Author *</label>
             <input
               class="book-form-input"
               type="text"
-              id="fName"
-              name="fName"
+              id="author"
+              name="author"
+              required
+              placeholder="Enter the author's name"
             />
-            <label class="book-form-label" for="lName">Book Title</label>
+            <label class="book-form-label" for="bookTitle">Book Title *</label>
             <input
               class="book-form-input"
               type="text"
-              id="lName"
-              name="lName"
+              id="bookTitle"
+              name="bookTitle"
+              required
+              placeholder="Enter the book title"
             />
-            <label class="book-form-label" for="genre">Genre</label>
-            <input
-              class="book-form-input"
-              type="text"
-              id="genre"
-              name="genre"
-            />
+            <label class="book-form-label" for="genre">Genre *</label>
+            <select class="book-form-input" id="genre" name="genre" required>
+              <option value="">Select a genre</option>
+              <option value="Fiction">Fiction</option>
+              <option value="Non-Fiction">Non-Fiction</option>
+              <option value="Science Fiction">Science Fiction</option>
+              <option value="Fantasy">Fantasy</option>
+              <option value="Mystery">Mystery</option>
+              <option value="Romance">Romance</option>
+              <option value="Thriller">Thriller</option>
+              <option value="Biography">Biography</option>
+              <option value="Self-Help">Self-Help</option>
+              <option value="Business">Business</option>
+              <option value="Technology">Technology</option>
+              <option value="History">History</option>
+              <option value="Other">Other</option>
+            </select>
             <label class="book-form-label" for="message"
-              >Insert your message</label
+              >Why do you recommend this book?</label
             >
             <textarea
               class="book-form-input"
               name="message"
               id="message"
+              placeholder="Tell me why you think I'd enjoy this book..."
             ></textarea>
             <br /><br />
-            <input type="submit" value="submit" id="book-submit" />
+            <button type="submit" class="book-submit-btn" id="book-submitBtn">
+              Submit
+            </button>
           </fieldset>
         </div>
       </section>
@@ -663,5 +688,6 @@
       </footer>
     </main>
     <script src="script.js"></script>
+    <script src="chatbot.js"></script>
   </body>
 </html>
