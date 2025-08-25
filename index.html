@@ -10,23 +10,24 @@
     <link rel="icon" type="image/png" href="images/Moe Headshot 2.PNG" />
   </head>
   <body>
-    <header id="#">
+    <header id="home">
       <!-- LOGO HEADER -->
       <div class="logo-holder">
-        <div class="logo">M</div>
+        <a href="#home" class="logo">M</a>
         <div class="logo-text">Moe's Portfolio!</div>
       </div>
       <!-- DESKTOP NAVIGATION -->
       <nav id="desktop-nav">
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#chatbot">AI Chatbot</a></li>
           <li><a href="#faqs">FAQS</a></li>
+          <li><a href="#suggestedReads">Suggested Reads</a></li>
         </ul>
       </nav>
+
       <!-- HAMBURGER MENU -->
       <nav id="hamburger-nav">
         <div class="hamburger-menu">
@@ -36,16 +37,21 @@
             <span></span>
           </div>
           <div class="hamburger-links">
-            <li><a href="#" onclick="toggleMenu()">Home</a></li>
             <li><a href="#about" onclick="toggleMenu()">About</a></li>
             <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
             <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
             <li><a href="#chatbot" onclick="toggleMenu()">AI Chatbot</a></li>
-            <li><a href="#faqs">FAQS</a></li>
+            <li><a href="#faqs" onclick="toggleMenu()">FAQS</a></li>
+            <li>
+              <a href="#suggestedReads" onclick="toggleMenu()"
+                >Suggested Reads</a
+              >
+            </li>
           </div>
         </div>
       </nav>
     </header>
+
     <main>
       <!-- HERO SECTION -->
       <section class="section-hero" id="home">
@@ -96,7 +102,7 @@
         </div>
       </section>
       <!-- ABOUT SECTION -->
-      <section id="about-section">
+      <section class="about-section" id="about">
         <div class="section-text">
           <p class="section-text-p1">Get To Know More</p>
           <h1 class="section-title">About Me</h1>
@@ -449,9 +455,7 @@
       <section id="chatbot" class="chatbot-section">
         <div class="section-text">
           <p class="section-text-p1">Lets Chat</p>
-          <h1 class="section-title">
-            AI Resume Assistant!
-          </h1>
+          <h1 class="section-title">AI Resume Assistant!</h1>
         </div>
         <div class="chatbot-container">
           <div class="chatbot-content">
@@ -597,14 +601,12 @@
         </div>
       </section>
       <!-- BOOK FORM SECTION -->
-      <section id="book-form">
+      <section class="book-section" id="suggestedReads">
         <div class="section-text">
           <p class="section-text-p1">Share your</p>
-          <h1 class="section-title">
-            Book Recommendations
-          </h1>
+          <h1 class="section-title">Suggested Reads</h1>
         </div>
-        <div class="section-form">
+        <div class="form-container">
           <fieldset>
             <p class="smaller-p-text">Knowledge is Power</p>
             <p class="smaller-p-text">Send Me A Good Book to Read 📚</p>
@@ -617,31 +619,31 @@
             <div class="error-message" id="errorMessage">
               ❌ Please fill in all required fields.
             </div>
-            <label class="book-form-label" for="author">Author *</label>
+            <label class="book-section-label" for="author">Author *</label>
             <input
-              class="book-form-input"
+              class="book-section-input"
               type="text"
               id="author"
               name="author"
               required
               placeholder="Enter the author's name"
             />
-            <label class="book-form-label" for="bookTitle">Book Title *</label>
+            <label class="book-section-label" for="bookTitle"
+              >Book Title *</label
+            >
             <input
-              class="book-form-input"
+              class="book-section-input"
               type="text"
               id="bookTitle"
               name="bookTitle"
               required
               placeholder="Enter the book title"
             />
-            <label class="book-form-label" for="genre">Genre *</label>
-            <select class="book-form-input" id="genre" name="genre" required>
+            <label class="book-section-label" for="genre">Genre *</label>
+            <select class="book-section-input" id="genre" name="genre" required>
               <option value="">Select a genre</option>
               <option value="Fiction">Fiction</option>
               <option value="Non-Fiction">Non-Fiction</option>
-              <option value="Science Fiction">Science Fiction</option>
-              <option value="Fantasy">Fantasy</option>
               <option value="Mystery">Mystery</option>
               <option value="Romance">Romance</option>
               <option value="Thriller">Thriller</option>
@@ -652,11 +654,11 @@
               <option value="History">History</option>
               <option value="Other">Other</option>
             </select>
-            <label class="book-form-label" for="message"
+            <label class="book-section-label" for="message"
               >Why do you recommend this book?</label
             >
             <textarea
-              class="book-form-input"
+              class="book-section-input"
               name="message"
               id="message"
               placeholder="Tell me why you think I'd enjoy this book..."

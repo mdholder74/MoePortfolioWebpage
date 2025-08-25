@@ -32,8 +32,8 @@
   --light-hero-gradient: linear-gradient(
     135deg,
     rgba(59, 130, 246, 0.15),
-    /* soft blue tint */ rgba(4, 124, 110, 0.15),
-    /* soft teal tint */ var(--white)
+    rgba(4, 124, 110, 0.15),
+    var(--white)
   );
   --shadow-soft: 0 10px 25px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -43,9 +43,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  border: 15px solid #92dfd8;
+  border: 10px solid #92dfd8;
   border-radius: 2rem;
-  margin: 20px;
+  margin: 10px;
 }
 
 html {
@@ -59,12 +59,12 @@ footer {
   margin: 20px auto;
   gap: 30px;
 }
-#about-section,
+#about,
 #skills,
 #projects,
 #chatbot,
 #faqs,
-#book-form,
+#suggestedReads,
 #map {
   display: flex;
   flex-direction: column;
@@ -115,6 +115,9 @@ header {
 }
 
 .logo {
+  position: fixed; /* The element is "pinned" to the viewport, so it never scrolls away */
+  top: 45px; /* Distance from the top of the viewport */
+  left: 25px; /* Distance from the left of the viewport */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,9 +125,15 @@ header {
   color: var(--grey);
   height: 64px;
   width: 64px;
-  margin-right: 20px;
   border-radius: 50%;
   background: var(--accent-teal);
+  text-decoration: none;
+  z-index: 2000; /* Ensures the element stays infront of other elements with a lower z-index. z-index does not work on static elements */
+  transition: transform 0.2s ease; /* transform' includes CSS functions like scale(), rotate(), translate(), etc. '0.2s' is the duration and ease is the timing function */
+}
+
+.logo:hover {
+  transform: scale(1.1);
 }
 
 .logo-text {
@@ -163,7 +172,7 @@ header {
 }
 
 .hamburger-menu {
-  position: relative;
+  position: relative; /* Needed for absolute positioning of dropdown. Establishes positioning context for its child elements. It keeps it in the normal document flow */
   display: inline-block;
 }
 .hamburger-icon-dash {
@@ -242,12 +251,15 @@ header {
 
 .hero-image-wrapper .hero-image {
   width: 100%; /* fills parent container */
-  max-width: 420px; /* keeps it from getting too big */
+  max-width: 420px;
   aspect-ratio: 1 / 1; /* keeps it a perfect square */
   object-fit: cover; /* crops nicely inside the circle */
   border-radius: 50%;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* shows how far shadow extends x-offset moves horizontal (left/right), y-offset moves vertical (up/down), blur radius moves from blur to sharp(softer=higher nums and sharper=lower nums), spread radius shrinks negative or grows positive, color */
+  transform: translateY(
+    -20px
+  ); /* Moves the image up by 2px, creating a floating/ lifting effect */
+  transition: transform 0.3s ease;
 }
 
 .hero-content {
@@ -285,24 +297,19 @@ header {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Gradient Resume Button */
 .btn-resume {
   background: linear-gradient(135deg, #5896fa77, #14b8a6);
 }
 
-/* Gradient Email Button (reverse colors for variety) */
 .btn-email {
   background: linear-gradient(135deg, #14b8a6, #5896fa77);
 }
 
-/* Hover effect — gradient shift & subtle lift */
 .btn-resume:hover,
 .btn-email:hover {
-  background-position: right center; /* Animate gradient */
-  transform: translateY(
-    -4px
-  ); /* On hover slight lift from normal position upward by 4px */
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2); /* how far shadow extends left/right, Vertical offset shadow down, Blur radius shadow from sharp to soft, color */
+  background-position: right center;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
@@ -319,7 +326,7 @@ header {
   width: 2.5rem;
   border-radius: 50%;
   padding: 0.5rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Adds a smooth animation effect whenever the element's properties change. all applies to all properties (e.g., transform, box-shadow, opacity). cubic-bezier(0.4, 0, 0.2, 1): custom timing function controlling speed of the animation. */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -336,7 +343,7 @@ header {
   transform: translateY(
     -4px
   ); /* On hover slight lift from normal position upward by 4px (negative Y = up, positive Y = down)*/
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* On hover the shadow is enhanced */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* ABOUT SECTION */
@@ -404,14 +411,14 @@ header {
   display: flex;
   align-items: center;
   gap: 40px;
-  overflow: hidden;
+  overflow: hidden; /* Prevents overflow of child elements controls what happens when content inside an element is larger than the element itself.  Either visible, hidden, scroll or auto. */
   transition: all 0.4s ease;
   position: relative;
 }
 
 .holder-blue:hover {
   box-shadow: var(--shadow-hover);
-  transform: translateY(-4px); /* Subtle lift on hover */
+  transform: translateY(-4px);
 }
 
 .left-column {
@@ -432,15 +439,15 @@ header {
 }
 
 .about-pic:hover {
-  transform: scale(1.02); /* Slight zoom on hover */
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
+  transform: scale(1.02);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
 }
 
 .right-column {
   flex: 1;
   padding: 40px 40px 40px 0;
   position: relative;
-  z-index: 1; /* Ensure text is above the overlay */
+  z-index: 1;
 }
 
 .right-column p {
@@ -448,7 +455,7 @@ header {
   font-size: 16px;
   line-height: 1.7;
   opacity: 0.95;
-  transition: opacity 0.3s ease; /* Smooth transition for readability */
+  transition: opacity 0.3s ease;
 }
 
 .right-column p:first-child {
@@ -476,7 +483,6 @@ header {
 .skills-details-container {
   display: flex;
   gap: 1rem;
-  /* flex-wrap: wrap; */
   justify-content: center;
 }
 
@@ -485,16 +491,16 @@ header {
   padding: 30px;
   border: 1px solid var(--light-grey);
   box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Soft shadow effect */
-  transition: all 0.3s ease; /* Smooth transition for hover effect */
-  position: relative; /* Stacking context for absolute children */
-  overflow: hidden; /* Prevents overflow of child elements */
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .skills-article-container:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 40px -4px rgba(0, 0, 0, 0.15),
-    0 8px 16px -4px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+    0 8px 16px -4px rgba(0, 0, 0, 0.1);
 }
 
 .skills-article-container::before {
@@ -1156,8 +1162,8 @@ header {
   font-size: 0.95rem;
 }
 
-/* BOOKS RECOMMENDATION SECTION */
-.section-form {
+/* SUGGESTED READS SECTION */
+.form-container {
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -1165,7 +1171,7 @@ header {
   margin: 0 auto;
 }
 
-.section-form fieldset {
+.form-container fieldset {
   border-radius: 1.5rem;
   text-align: center;
   border: 5px solid var(--blue);
@@ -1180,22 +1186,23 @@ header {
   overflow: hidden;
 }
 
-.section-form fieldset::before {
+/* Before pseudo-element is created by the browser automatically and places it inside the element, and before any actual HTML content. */
+.form-container fieldset::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
+  top: 0; /* Positions the gradient at the top of the fieldset */
+  left: 0; /* Extends the gradient to the left edge */
+  right: 0; /* Extends the gradient to the right edge */
+  height: 3px; /* Sets the height of the gradient bar */
   background: linear-gradient(90deg, var(--primary-blue), var(--accent-teal));
 }
 
-.section-form fieldset:hover {
+.form-container fieldset:hover {
   transform: translateY(-3px);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
 }
 
-.section-form fieldset legend {
+.form-container fieldset legend {
   font-size: 1.25rem;
   font-weight: 700;
   color: white;
@@ -1219,7 +1226,7 @@ fieldset .smaller-p-text:first-of-type {
   color: var(--dark-grey);
 }
 
-fieldset .book-form-label {
+fieldset .book-section-label {
   display: block;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
@@ -1228,60 +1235,57 @@ fieldset .book-form-label {
   font-size: 0.9rem;
 }
 
-fieldset .book-form-input {
+fieldset .book-section-input {
   width: 100%;
-  padding: 0.6rem 0rem;
+  padding: 0.6rem 0.5rem;
   border: 2px solid var(--light-grey);
   border-radius: 8px;
   font-size: 0.95rem;
-  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
   background: white;
+  color: var(--dark-grey);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-fieldset .book-form-input:focus {
+fieldset .book-section-input:focus {
   outline: none;
   border-color: var(--primary-blue);
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
   transform: translateY(-1px);
+  background-color: white;
 }
 
-fieldset .book-form-input:hover {
+fieldset select.book-section-input {
+  transition: all 0.3s ease;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center; /* Positions the dropdown arrow to the right, 0.5rem spacing from the right edge and vertically centered */
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em; /*Sets the width and height of the arrow relative to the font size.*/
+  padding-right: 2.5rem;
+  appearance: none; /* Removes the browser’s default styling for consistent custom styling. */
+  -webkit-appearance: none; /* Removes the default styling in WebKit browsers (e.g., Chrome, Safari) */
+  -moz-appearance: none; /* Removes the default styling in Firefox */
+}
+
+fieldset .book-section-input:hover {
   border-color: var(--grey);
+  background-color: #fafafa;
 }
 
-fieldset textarea.book-form-input {
+fieldset select.book-section-input option[value=""] {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+fieldset textarea.book-section-input {
   min-height: 100px;
   resize: vertical;
   font-family: inherit;
 }
 
-fieldset .book-submit-btn {
-  background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
-  color: white;
-  border: none;
-  padding: 0.75rem 2rem;
-  border-radius: 25px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-fieldset .book-submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-fieldset .book-submit-btn:active {
-  transform: translateY(0);
-}
-
-/* Add this CSS to your style.css file to fix the message display */
-
-.success-message, .error-message {
+.success-message,
+.error-message {
   display: none;
   padding: 15px;
   border-radius: 10px;
@@ -1295,19 +1299,25 @@ fieldset .book-submit-btn:active {
 }
 
 .success-message {
-  background: linear-gradient(135deg, #10b981, #059669);
+  background: linear-gradient(135deg, #60b99c, #059669);
   color: white;
   border: 2px solid #059669;
 }
 
 .error-message {
-  background: linear-gradient(135deg, #ef4444, #dc2626);
+  background: linear-gradient(135deg, #f07a7a, #dc2626);
   color: white;
   border: 2px solid #dc2626;
 }
 
-/* When displayed, override the display: none */
-.success-message[style*="block"], .error-message[style*="block"] {
+/*  
+- Targets elements with the classes .success-message or .error-message
+      ONLY when their inline style contains "block" (e.g., style="display: block").
+    - This allows JavaScript to toggle visibility dynamically by setting
+      element.style.display = "block".
+      */
+.success-message[style*="block"],
+.error-message[style*="block"] {
   display: block;
   animation: slideDown 0.3s ease-out;
 }
@@ -1321,6 +1331,29 @@ fieldset .book-submit-btn:active {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+fieldset .book-submit-btn {
+  background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.05em;
+}
+
+fieldset .book-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+fieldset .book-submit-btn:active {
+  transform: translateY(0);
 }
 
 /* MAP SECTION*/
