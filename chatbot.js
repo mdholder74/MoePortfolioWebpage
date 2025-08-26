@@ -83,7 +83,7 @@ class PortfolioChatbot {
 
     // Experience questions
     if (lowerMessage.includes('experience') || lowerMessage.includes('work') || lowerMessage.includes('job')) {
-      return "Moe has experience as a Software Developer Intern at PulteGroup, where she built an Angular + C# Web API learning dashboard and authored onboarding documentation. She also tutors software engineering students at Per Scholas, boosting project completion rates by 30%. Before transitioning into tech, she worked in HR and recruiting at Amazon Web Services, Southwire, and Amazon, where she developed tools, optimized processes, and led teams.";
+      return "Moe has experience as a Software Developer Intern at PulteGroup, where she built an Angular + C# Web API learning dashboard and authored onboarding documentation. She also tutors software engineering students at Per Scholas, boosting project completion rates by 30%. Before transitioning into tech, she worked in HR and recruiting at Amazon Web Services, where she developed tools, optimized processes, and led teams.";
     }
 
     // Amazon-specific questions
@@ -93,7 +93,7 @@ class PortfolioChatbot {
 
     // Projects questions
     if (lowerMessage.includes('project') || lowerMessage.includes('build') || lowerMessage.includes('created')) {
-      return "Moe has built several projects: a Chrome Extension called 'Website Link Saver' for organizing saved links, an Amazon-inspired e-commerce clone with interactive cart functionality, and a personal portfolio website. She also contributed to enterprise-level applications at PulteGroup using Angular and RxJS.";
+      return "Moe has built several projects: a Chrome Extension called 'Website Link Saver' for organizing saved links, an Amazon-inspired e-commerce clone with interactive cart functionality, and a personal portfolio website. She also contributed to enterprise-level applications at PulteGroup using Angular.";
     }
 
     // Education questions
@@ -138,7 +138,7 @@ class PortfolioChatbot {
 
     // Hobby/personal questions
     if (lowerMessage.includes('hobby') || lowerMessage.includes('interest') || lowerMessage.includes('fun')) {
-      return "Outside of work, Moe enjoys football, basketball (go Lakers!), traveling, combat sports, and learning through YouTube tutorials. She also created a bartending app that mixes her love for tech and cocktails!";
+      return "Outside of work, Moe enjoys football (go Panthers), basketball (go Lakers!), traveling, combat sports, and learning through YouTube tutorials.";
     }
 
     // Default responses for unmatched queries
