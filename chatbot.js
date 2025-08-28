@@ -10,8 +10,9 @@ class PortfolioChatbot {
   }
 
   init() {
-    // Add event listeners
+    // When user clicks the send button, trigger sendMessage()
     this.sendBtn.addEventListener("click", () => this.sendMessage());
+    // When user presses Enter inside the input box, trigger sendMessage()
     this.chatInput.addEventListener("keypress", (e) => {
       if (e.key === "Enter") {
         this.sendMessage();
@@ -19,40 +20,49 @@ class PortfolioChatbot {
     });
   }
 
+  // Handles sending a message from the user and generating a bot response
   sendMessage() {
     const message = this.chatInput.value.trim();
     if (!message) return;
 
     // Add user message to chat
     this.addMessage(message, "user");
+
+    // Clear the input field after sending
     this.chatInput.value = "";
 
     // Show typing indicator
     this.showTypingIndicator();
 
-    // Generate bot response after a delay
+    // Simulate delay before bot responds (1–2 seconds)
     setTimeout(() => {
       this.hideTypingIndicator();
       const response = this.generateResponse(message);
-      this.addMessage(response, "bot");
+
+      this.addMessage(response, "bot"); // Add the bot's response to the chat window
     }, 1000 + Math.random() * 1000); // Random delay between 1-2 seconds
   }
 
   addMessage(text, sender) {
+    // Creates the main outer container for the messages that represents the user or bot message and appends it to the chat window
     const messageDiv = document.createElement("div");
     messageDiv.className = `message ${sender}`;
 
+    // Create the avatar element that shows who sent the message (AI or User)
     const avatar = document.createElement("div");
     avatar.className = `message-avatar ${sender}`;
     avatar.textContent = sender === "bot" ? "AI" : "You";
 
+    // Create the message content element that holds the actual text of the message sent
     const content = document.createElement("div");
     content.className = "message-content";
     content.textContent = text;
 
+    // Append avatar and content together inside the main outer container
     messageDiv.appendChild(avatar);
     messageDiv.appendChild(content);
 
+    // Append the newly created message div to the chat window
     this.chatMessages.appendChild(messageDiv);
     this.scrollToBottom();
   }
@@ -66,6 +76,7 @@ class PortfolioChatbot {
     this.typingIndicator.style.display = "none";
   }
 
+  // Takes total scroll height of all messages stacked inside the chat window  and sets the scrollTop property to that value. This ensures the latest message is always visible.
   scrollToBottom() {
     this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
   }
@@ -183,7 +194,7 @@ class PortfolioChatbot {
 
     // Default responses for unmatched queries
     const defaultResponses = [
-      "That's an interesting question! Moe is a dynamic professional transitioning from HR into Software Engineering with hands-on experience in full-stack development, API integration, and database management.",
+      "That's an interesting question! Moe is transitioning from HR into Software Engineering with hands-on experience in full-stack development, API integration, and database management.",
       "I'd love to help you learn more about Moe! She's skilled in both frontend and backend technologies, currently pursuing her CS degree, and looking for opportunities to make meaningful impact.",
       "Great question! Moe combines technical expertise with an MBA and years of leadership experience at Amazon. What specific aspect would you like to know more about?",
       "Thanks for asking! Moe is passionate about innovative technology solutions and collaborative problem-solving. Feel free to ask about her specific skills, projects, or experience!",
@@ -201,7 +212,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Global sendMessage function for the onclick handler
+
 function sendMessage() {
-  // This will be handled by the PortfolioChatbot instance
-  // The class handles the actual functionality
+  // This function is intentionally left empty because:
+  // - The PortfolioChatbot instance handles sending messages
+  // - It's included only to prevent errors if HTML uses onclick="sendMessage()"
 }
